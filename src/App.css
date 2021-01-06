@@ -61,6 +61,11 @@ form{
 
 button{
     margin:10px;
+    border:none;
+    background-color:red;
+    padding:4px;
+    color:white;
+    border-radius:5px;
 }
 .home{
     margin:20px;
@@ -72,4 +77,16 @@ button{
 
 .links{
     color:skyblue;
+}
+
+.bold{
+    font-weight:bolder
+}
+.singleRecipefromlist{
+    margin:20px;
+}
+.recipelistbox{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

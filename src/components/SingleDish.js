@@ -10,10 +10,9 @@ const SingleDish = (props)=>{
                     return (
                         <div key={Math.random()}>
                             <img src={a.recipe.image} />
-                            <p>{a.recipe.label}</p>
-                            <p>{a.recipe.calories}</p>
-                            <p>{a.recipe.label}</p>
-                            <p>{a.recipe.label}</p>
+                            <h3><span className='bold'>{a.recipe.label}</span></h3>
+                            <p><span className='bold'>Calories:</span> {a.recipe.calories}</p>
+                            <p><span className='bold'>Source: </span><a href={a.recipe.url} className='links'>{a.recipe.source}</a></p>
                             <br />
                             <button onClick={()=>{props.history.push('/recipelist')}}>BACK</button>
                         </div>

@@ -40,10 +40,10 @@ class RecipeList extends React.Component{
             console.log('the state: ',this.state.data)
             return this.state.data.map(a=>{
                 return (
-                    <div key={Math.random()}>
+                    <div key={Math.random()} className='singleRecipefromlist'>
                         <NavLink to={`/${a.recipe.label}`} >
                             <img src={a.recipe.image} />
-                            <p>{a.recipe.label}</p>
+                            <h3 id='recipelabel'>{a.recipe.label}</h3>
                         </NavLink>
                     </div>
                 )
@@ -57,7 +57,9 @@ class RecipeList extends React.Component{
                     <input onChange={this.handleChange} value={this.state.search} />
                     <button>SEARCH</button>
                 </form>
-                {this.display_list()}
+                <div className='recipelistbox'>
+                    {this.display_list()}
+                </div>
             </div>
         )
     }
